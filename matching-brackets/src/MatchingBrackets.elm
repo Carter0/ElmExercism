@@ -4,7 +4,7 @@ module MatchingBrackets exposing (isPaired)
 isPaired : String -> Bool
 isPaired input =
     case String.foldl stackFunctionality (Result.Ok []) input of
-        Err error ->
+        Err _ ->
             False
 
         Ok value ->
